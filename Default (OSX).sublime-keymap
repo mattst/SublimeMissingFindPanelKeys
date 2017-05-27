@@ -1,3 +1,60 @@
 [
+    // Sublime Text 3 does not provide key bindings for some of the buttons located in
+    // the search panels, i.e. Find, Find/Replace, Incremental Find, and Find in Files.
+    // Specifically the toggle buttons: Wrap, In Selection, and Highlight. Additionally
+    // in the Find in Files panel only: Show Context, Use Buffer, Find, and Replace.
+    //
+    // This file adds key bindings for all of those buttons but is unable to include the
+    // button in the Find in Files panel which adds items to the 'where' text box field
+    // using a context menu, sadly there is no command available to launch this action.
+    //
+    // Where the first letter of the button's action is already used by another command,
+    // the action's last letter is used instead, because this is easy to remember; i.e.
+    // 'P' is used to toggle 'Wrap' since 'W' is already used to toggle the 'Whole Word'.
+    // 'T' is used to toggle 'Show Context' since 'C' is used to toggle 'Case Sensitive'.
 
+
+    // Key bindings for the Find, Find/Replace, and Incremental Find panels.
+    //
+    // Note: The context key 'setting.is_widget' is used instead of the panel name to be
+    // consistent with the toggle button bindings in the default sublime-keymap files.
+
+    {
+        "keys": ["super+alt+p"], "command": "toggle_wrap",
+        "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
+    },
+
+    {
+        "keys": ["super+alt+s"], "command": "toggle_in_selection",
+        "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
+    },
+
+    {
+        "keys": ["super+alt+h"], "command": "toggle_highlight",
+        "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
+    },
+
+    // Key bindings for the Find in Files panel only.
+
+    {
+        "keys": ["super+alt+t"], "command": "toggle_show_context",
+        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+    },
+
+    {
+        "keys": ["super+alt+b"], "command": "toggle_use_buffer",
+        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+    },
+
+    // The command names below may need changing when the actions get fixed.
+
+    {
+        "keys": ["alt+enter"], "command": "find_all", "args": {"close_panel": true},
+        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+    },
+
+    {
+        "keys": ["ctrl+alt+enter"], "command": "replace_all", "args": {"close_panel": true},
+        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+    }
 ]
