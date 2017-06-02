@@ -40,8 +40,6 @@
         "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
     },
 
-    // The command names below may need changing when the actions get fixed.
-
     {
         "keys": ["alt+enter"], "command": "find_all", "args": {"close_panel": true},
         "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
