@@ -3,7 +3,7 @@
 
 ### Overview
 
-*Missing Find Panel Keys* is a Sublime Text 3 package which provides key bindings for the find panel buttons which are not assigned keys in the default Sublime Text keymap files.
+*Missing Find Panel Keys* is a Sublime Text 3 package which provides key bindings for the find panel toggle buttons which are not assigned keys in the default Sublime Text keymap files.
 
 Key bindings added for the Find, Replace, and Incremental Find Panels:
 
@@ -15,16 +15,16 @@ Key bindings added for the Find in Files Panel:
 
 - Toggle Use Buffer
 - Toggle Show Context
-- Find (ST Build 3132+)
-- Replace (ST Build 3132+)
 
-Unfortunately no key binding can be added for the Find in Files panel button, labelled `'...'`, which adds items to the `Where` text box, because there is no command currently available for that action. However users should note that `Tab` can be pressed to focus the `Where` text box at which point its history can be scrolled through using the `Up/Down` keys and deleting its contents will revert it to the default of `Open Files and Folders`.
+Information about the other Find in Files Panel buttons:
+
+- [Dev Build](https://www.sublimetext.com/3dev) 3133 added key bindings for the Find in Files panel `Find` and `Replace` buttons. It is not possible to add key bindings for those buttons to versions earlier than 3133 because no commands existed to perform their actions.
+- No key binding can be added for the Find in Files panel button, labelled `'...'`, which adds items to the `Where` text box, because there is no command currently available to launch that action in any version of Sublime Text.
+- For mouse-less operation users should note that `Tab` can be pressed to focus the `Where` text box at which point its history can be scrolled through using the `Up/Down` keys and deleting its contents will revert it to its `Open Files and Folders` default.
 
 ### Requirements
 
 - Sublime Text 3
-- The Find and Replace buttons in the Find in Files panel need version 3132 or later
-    - No problem installing on earlier versions but those button's keys won't work
 
 ### Installing
 
@@ -34,13 +34,16 @@ Use [Package Control](https://packagecontrol.io/):
 - Wait for the package list to be updated and then select: `Missing Find Panel Keys`
 - Note: Package submitted, awaiting addition
 
-Of course users can, if they prefer, [download](https://github.com) the zip file and [install it manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html). There are no package file naming restrictions beyond the usual `.sublime-package` file extension but `MissingFindPanelKeys.sublime-package` would be a sensible choice. Clearly manual installation will prevent Package Control from automatically updating the package.
+Users can, if they prefer, download the [zip file](https://github.com/mattst/SublimeMissingFindPanelKeys/archive/master.zip) and then [install it manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html). Clearly manual installation will prevent Package Control from automatically updating the package.
 
 ### Key Bindings
 
 The key bindings are only active when one of the find panels is focused.
 
-Where the first letter of the button's action is already used by another toggle command, the action's last letter is used instead, because that's easy to remember. So `P` is used to toggle `Wrap` since `W` is already used to toggle `Whole Word`, likewise `T` is used to toggle `Show Context` because `C` is already used to toggle `Case Sensitive`.
+If the first letter of the button's action is already used by another button's command then the action's last letter is used instead because that is easy to remember. i.e.
+
+- `P` is used to toggle `Wrap` since `W` is already used to toggle `Whole Word`
+- `T` is used to toggle `Show Context` since `C` is already used to toggle `Case Sensitive`
 
 #### Linux and Windows
 
@@ -55,8 +58,6 @@ Where the first letter of the button's action is already used by another toggle 
     --------------------------------------------------
     Toggle Use Buffer                 Alt+B
     Toggle Show Context               Alt+T
-    Find (All)                        Alt+Enter
-    Replace (All)                     Ctrl+Alt+Enter
     --------------------------------------------------
 
 #### OSX
@@ -72,16 +73,14 @@ Where the first letter of the button's action is already used by another toggle 
     --------------------------------------------------
     Toggle Use Buffer                 Super+Alt+B
     Toggle Show Context               Super+Alt+T
-    Find (All)                        Alt+Enter
-    Replace (All)                     Ctrl+Alt+Enter
     --------------------------------------------------
 
 #### Changing the Keys
 
-If you wish to change the keys all you need do is copy and paste the relevant binding from the keymap file ([Linux](http://github.com), [OSX](http://github.com), [Windows](http://github.com)) into your user keys file.
+To change the keys just copy and paste the relevant binding from the keymap file ([Linux](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(Linux).sublime-keymap), [OSX](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(OSX).sublime-keymap), [Windows](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(Windows).sublime-keymap)) into your user keys file and change the key bindings to whatever you want.
 
-However, if you don't already know about it, the incredibly useful [PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer) plugin is designed to make these kind of changes with tremendous ease.
+Note that the incredibly useful [PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer) plugin is designed to make package changes like this with speed and ease - installing it and learning how to use it will save you a lot of time in the long run.
 
 ### License
 
-This package is licensed under [The MIT License (MIT)](http://github.com).
+This package is licensed under [The MIT License (MIT)](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/LICENSE).
