@@ -1,19 +1,13 @@
 [
-    // Sublime Text 3 does not provide key bindings for some of the buttons located in
-    // the search panels, i.e. Find, Find/Replace, Incremental Find, and Find in Files.
-    // This file adds key bindings for the missing actions specifically for the toggle
-    // buttons: Wrap, In Selection, and Highlight. Additionally, for the Find in Files
-    // panel only: Show Context, Use Buffer, Find, and Replace. At the moment no key
-    // binding can be added for the Find in Files panel '...' button, which adds items
-    // to the 'Where' text box, as there is no command available to launch this action.
+    // This file adds key bindings for the toggle buttons in the various find panels
+    // which Sublime Text 3 does not provide key bindings for in the default sublime
+    // keymap files: Wrap, In Selection, Highlight, Show Context, and Use Buffer.
 
-
-    // Key bindings for the Find, Find/Replace, and Incremental Find panels.
-    //
-    // Note: The context key 'setting.is_widget' is used instead of the panel name for
-    // consistency with the toggle button bindings in the default sublime-keymap files.
+    // Note: The context key 'setting.is_widget' is used instead of the panel name to
+    // be consistent with the toggle button bindings used in the default keymap files.
 
     {
+        // Last letter 'P' is used because 'W' is used by 'toggle_whole_word'.
         "keys": ["alt+p"], "command": "toggle_wrap",
         "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
     },
@@ -28,25 +22,14 @@
         "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
     },
 
-    // Key bindings for the Find in Files panel.
-
     {
+        // Last letter 'T' is used because 'C' is used by 'toggle_case_sensitive'.
         "keys": ["alt+t"], "command": "toggle_show_context",
-        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+        "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
     },
 
     {
         "keys": ["alt+b"], "command": "toggle_use_buffer",
-        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
-    },
-
-    {
-        "keys": ["alt+enter"], "command": "find_all", "args": {"close_panel": true},
-        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
-    },
-
-    {
-        "keys": ["ctrl+alt+enter"], "command": "replace_all", "args": {"close_panel": true},
-        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+        "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
     }
 ]
