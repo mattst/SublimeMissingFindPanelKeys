@@ -1,9 +1,9 @@
 
-## Missing Find Panel Keys (Sublime Text 3 Package)
+## Missing Find Panel Keys (Sublime Text Package)
 
 ### Overview
 
-*Missing Find Panel Keys* is a Sublime Text 3 package which provides key bindings for the find panel toggle buttons which are not assigned keys in the default Sublime Text keymap files.
+*Missing Find Panel Keys* is a Sublime Text package which provides key bindings for the find panel toggle buttons which are not assigned keys in the default Sublime Text keymap files.
 
 Key bindings added for the Find, Replace, and Incremental Find Panels:
 
@@ -24,7 +24,8 @@ Information about the other Find in Files Panel buttons:
 
 ### Requirements
 
-- Sublime Text 3
+- Sublime Text version 2 or 3
+
 
 ### Installing
 
