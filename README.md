@@ -32,10 +32,10 @@ Information about the other Find in Files Panel buttons:
 Use [Package Control](https://packagecontrol.io/):
 
 - Open the command palette and select: `Package Control: Install Package`
-- Wait for the package list to be updated and then select: `Missing Find Panel Keys`
+- Wait for the package list to be updated and then select: `MissingFindPanelKeys`
 - Note: Package submitted, awaiting addition
 
-Users can, if they prefer, download the [zip file](https://github.com/mattst/SublimeMissingFindPanelKeys/archive/master.zip) and then [install it manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html). Clearly manual installation will prevent Package Control from automatically updating the package.
+Users can, if they prefer, download the [zip file](https://github.com/mattst/SublimeMissingFindPanelKeys/archive/master.zip) and then [install it manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html); `MissingFindPanelKeys.sublime-package` should be used as the installed package file name or, if unzipping for folder installation, then `MissingFindPanelKeys` should be used as the folder name.
 
 ### Key Bindings
 
@@ -78,9 +78,9 @@ If the first letter of the button's action is already used by another button's c
 
 #### Changing the Keys
 
-To change the keys just copy and paste the relevant binding from the keymap file ([Linux](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(Linux).sublime-keymap), [OSX](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(OSX).sublime-keymap), [Windows](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(Windows).sublime-keymap)) into your user keys file and change the key bindings to whatever you want.
+To change the keys just copy and paste the relevant binding from the default keymap file, `Menu --> Preferences --> Package Settings --> MissingFindPanelKeys` / GitHub links [Linux](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(Linux).sublime-keymap), [OSX](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(OSX).sublime-keymap), [Windows](https://github.com/mattst/SublimeMissingFindPanelKeys/blob/master/Default%20(Windows).sublime-keymap), into your user keys file and change the key bindings to whatever you want.
 
-Note that the incredibly useful [PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer) plugin is designed to make package changes like this with speed and ease - installing it and learning how to use it will save you a lot of time in the long run.
+Note that the incredibly useful [PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer) plugin is designed to make package changes with speed and ease - installing it and learning how to use it will save you a lot of time in the long run.
 
 ### License
 
