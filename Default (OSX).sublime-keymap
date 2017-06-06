@@ -13,7 +13,8 @@
     },
 
     {
-        "keys": ["super+alt+s"], "command": "toggle_in_selection",
+        // Last letter 'N' is used because 'S' is used by 'save_all'.
+        "keys": ["super+alt+n"], "command": "toggle_in_selection",
         "context": [{"key": "setting.is_widget", "operator": "equal", "operand": true}]
     },
 

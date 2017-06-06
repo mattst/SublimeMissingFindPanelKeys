@@ -41,10 +41,11 @@ Users can, if they prefer, download the [zip file](https://github.com/mattst/Sub
 
 The key bindings are only active when one of the find panels is focused.
 
-If the first letter of the button's action is already used by another button's command then the action's last letter is used instead because that is easy to remember. i.e.
+If the first letter of the button's action can not be used for the key binding then the action's last letter is used instead because that is easy to remember. The following key bindings use the last letter instead of the first:
 
-- `P` is used to toggle `Wrap` since `W` is already used to toggle `Whole Word`
-- `T` is used to toggle `Show Context` since `C` is already used to toggle `Case Sensitive`
+- `P` is used to toggle `Wrap` since `W` is already used by `toggle_whole_word`
+- `T` is used to toggle `Show Context` since `C` is already used by `toggle_case_sensitive`
+- OSX Only: `N` is used to toggle `In Selection` since `S` is used by `save_all` (which must remain active)
 
 #### Linux and Windows
 
@@ -66,7 +67,7 @@ If the first letter of the button's action is already used by another button's c
     For the Find, Replace, and Incremental Find Panels
     --------------------------------------------------
     Toggle Wrap                       Super+Alt+P
-    Toggle In Selection               Super+Alt+S
+    Toggle In Selection               Super+Alt+N
     Toggle Highlight Matches          Super+Alt+H
     --------------------------------------------------
 
