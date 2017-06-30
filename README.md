@@ -33,7 +33,6 @@ Use [Package Control](https://packagecontrol.io/):
 
 - Open the command palette and select: `Package Control: Install Package`
 - Wait for the package list to be updated and then select: `MissingFindPanelKeys`
-- Note: Package submitted, awaiting addition
 
 Users can, if they prefer, download the [zip file](https://github.com/mattst/SublimeMissingFindPanelKeys/archive/master.zip) and then [install it manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html); `MissingFindPanelKeys.sublime-package` should be used as the installed package file name or, if unzipping for folder installation, then `MissingFindPanelKeys` should be used as the folder name.
 
